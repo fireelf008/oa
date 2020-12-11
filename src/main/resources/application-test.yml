@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driverClassName: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@192.168.1.132:1522:xe
+    username: bdczx
+    password: bdczx
+    hikari:
+      minimum-idle: 5
+      idle-timeout: 180000
+      maximum-pool-size: 100
+      auto-commit: true
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: select 1 from dual
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
